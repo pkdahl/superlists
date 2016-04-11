@@ -1,0 +1,29 @@
+#+title: Provisioning a new site
+
+* Required packages:
+- nginx
+- Python 3
+- Git
+- pip
+- venv
+
+e.g. on Ubuntu:
+=sudo apt-get install nginx git python3 python3-pip=
+=sudo apt-get python3.4-venv=
+
+* Nginx virtual host config
+- see [[file:nginx.template.conf][nginx.template.conf]]
+- replace =SITENAME= with, e.g. =superlists-staging.example.com=
+
+* Folder structure:
+Assume we have a user account at =/home/username/=
+
+#+begin_example
+/home/username
+`-- sites
+    `-- SITENAME
+        |-- database
+        |-- source
+        |-- static
+        `-- venv
+#+end_example
